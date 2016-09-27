@@ -22,7 +22,7 @@ Codeigniter has 2 ways of loading a library:
     
 and go to the line
 
-    ```$autoload['libraries']```
+    $autoload['libraries']
     
 and add it to the array, like for example 
     
@@ -50,5 +50,8 @@ Assign it to a variable and pass it to your views for output.
 Breadcrumbs helps us trace our way back, starting from the current page and ideally up to the homepage. It is commnsense that the last link is the current page, and it should not be clickable. This will handled automatically, where the last link will be non-clickable.
 
 
-
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
 
