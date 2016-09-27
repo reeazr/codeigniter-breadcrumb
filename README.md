@@ -1,7 +1,7 @@
 # codeigniter-breadcrumb
-A small library to generate breadcrumbs for codeigniter 3
+A very simple library to generate breadcrumbs for codeigniter 3
 
-Copy the file to system\libraries folder.
+Installation is very traightforward. Copy the file to system\libraries folder.
 
 There are 2 methods:
 
@@ -11,31 +11,44 @@ There are 2 methods:
 add() will add each breadcrumbs to the stack
 render() will generate the full breadcrumb.
 
-You can get the library loaded automatically by adding it in
-application\config\autoload.php
-Look for the line
+Codeigniter has 2 ways of loading a library: 
+
+    1 - Autoload
+    2 - Manual loading
+
+**Autoloading** is useful if you will be using the library in many places. In our case, since we will need the breadcrumbs throughout the site, it will be better better if we autoload it. Search for
+
+    application\config\autoload.php
+    
+and go to the line
 
     $autoload['libraries']
     
-and add it to the array
-
+and add it to the array, like for example 
+    
+    array('database','mybreadcrumb')
+    
+**Manual Loading**: 
 You can alternatively load the library in the controller itself before calling its methods.
 
     $this->load->library('mybreadcrumb');
     
-From your controller, add the following line
+Then, from your controller, add the following lines
 
     $this->mybreadcrumb->add('Home', base_url());
     $this->mybreadcrumb->add('Cities', base_url('cities/listing'));
 
-And finally
+which will add each lines submitted in an array. Finally, to get the breadcrumbs, use the render() method.
 
-    $this->data['breadcrumbs'] = $this->mybreadcrumb->render();
+    $this->mybreadcrumb->render();
     
-and pass $this->data to your view to be displayed, like
+Assign it to a variable and pass it to your views for output. 
+    
+    $data['breadcrumbs'] = $this->mybreadcrumb->render();
+    $this->load->view('examplepage',$data);
 
-    $this->load->view('cities/listing',$this->data);
-    
-Kindly note that the last item loaded will be active, rendered as non-clickable since it is expected to the current page.
+Breadcrumbs helps us trace our way back, starting from the current page and ideally up to the homepage. It is commnsense that the last link is the current page, and it should not be clickable. This will handled automatically, where the last link will be non-clickable.
+
+
 
 
