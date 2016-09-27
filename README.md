@@ -22,7 +22,7 @@ Codeigniter has 2 ways of loading a library:
     
 and go to the line
 
-    $autoload['libraries']
+    ```$autoload['libraries']```
     
 and add it to the array, like for example 
     
