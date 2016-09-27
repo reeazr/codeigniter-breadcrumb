@@ -5,16 +5,16 @@ Installation is very traightforward. Copy the file to system\libraries folder.
 
 There are 2 methods:
 
-    add()
-    render()
+    * add()
+    * render()
 
 add() will add each breadcrumbs to the stack
 render() will generate the full breadcrumb.
 
 Codeigniter has 2 ways of loading a library: 
 
-    1 - Autoload
-    2 - Manual loading
+    1. Autoload
+    2. Manual loading
 
 **Autoloading** is useful if you will be using the library in many places. In our case, since we will need the breadcrumbs throughout the site, it will be better better if we autoload it. Search for
 
