@@ -7,11 +7,11 @@ class CI_Mybreadcrumb {
 	
 	function __construct()
 	{
-		$this->tags['open'] = "<ol class='breadcrumb'>":
+		$this->tags['open'] = "<ol class='breadcrumb'>";
 		$this->tags['close'] = "</ol>";
 		$this->tags['itemOpen'] = "<li>";
 		$this->tags['itemClose'] = "</li>";
-		
+	}
 
 	function add($title, $href){		
 		if (!$title OR !$href) return;
