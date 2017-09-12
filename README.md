@@ -47,5 +47,5 @@ Assign it to a variable and pass it to your views for output.
     $data['breadcrumbs'] = $this->mybreadcrumb->render();
     $this->load->view('examplepage',$data);
 
-Breadcrumbs helps us trace our way back, starting from the current page and ideally up to the homepage. It is commnsense that the last link is the current page, and it should not be clickable. This will handled automatically, where the last link will be non-clickable.
+Breadcrumbs helps us trace our way back, starting from the current page and ideally up to the homepage. It is commonsense that the last link is the current page, and it should not be clickable. This will be handled automatically, where the last link will be non-clickable.
 
