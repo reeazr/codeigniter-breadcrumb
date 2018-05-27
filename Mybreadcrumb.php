@@ -66,7 +66,7 @@ class CI_Mybreadcrumb {
 				$output .= $breadcrumb['title'];
 				$output .= '</li>';
 			}else{
-				$output .= '<li>';
+				$output .= ($this->tags['itemOpen'])?$this->tags['itemOpen']:'<li>';
 				$output .= '<a href="'.$breadcrumb['href'].'">';
 				$output .= $breadcrumb['title'];
 				$output .= '</a>';
