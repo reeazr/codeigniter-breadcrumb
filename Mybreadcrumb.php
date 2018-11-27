@@ -3,7 +3,7 @@
 class CI_Mybreadcrumb {
 
 	private $breadcrumbs = array();
-	private $tags = "";
+	private $tags = array();
 	
 	function __construct()
 	{
@@ -51,7 +51,7 @@ class CI_Mybreadcrumb {
 	}
 	
 	function render(){
-
+tagstags
 		if(!empty($this->tags['open'])){
 			$output = $this->tags['open'];
 		}else{
